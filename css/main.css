@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: "chairdrobebold";
+    font-family: "bebas_kairegular";
     letter-spacing: 0.04em;
 }
 
@@ -29,7 +29,7 @@ button:focus {
 
 button {
     font-size: 2rem;
-    font-family: "chairdrobebold";
+    font-family: "bebas_kairegular";
     color: #8a8c5d;
     background-color: #f3f19e;
     padding: 0.7em;
@@ -53,7 +53,7 @@ a:active {
 
 .container {
     width: 100%;
-    max-width: 1170px;
+    max-width: 1920px;
     margin: 0 auto;
     position: relative;
     padding: 0 15px;
@@ -79,26 +79,29 @@ h1,
 h2,
 h3,
 h4 {
-    font-weight: 600;
     margin: 0;
 }
 
 h1 {
+    font-weight: 600;
     font-size: 4rem;
     line-height: 0.8;
 }
 
 h2 {
+    font-weight: 600;
     font-size: 3rem;
     line-height: 0.8;
 }
 
 h3 {
+    font-weight: 600;
     font-size: 2rem;
     line-height: 0.8;
 }
 
 h4 {
+    font-weight: 500;
     font-size: 1.5rem;
     line-height: 0.8;
 }
@@ -137,9 +140,12 @@ main {
 .logoicon i {
     z-index: 10;
     position: relative;
-    animation: rotate 12s linear infinite;
+    animation: rotate 18s linear infinite;
     font-size: 1.5rem;
     line-height: 0;
+    transform-origin: center;
+    line-height: inherit;
+    color: var(--purple);
 }
 
 @keyframes rotate {
@@ -240,10 +246,14 @@ main {
     background-size: cover;
 }
 
+.formMain {
+    width: 60%;
+}
+
 form {
     background: var(--yellow);
     padding: 2em;
-    font-family: "chairdrobebold";
+    font-family: "bebas_kairegular";
     border-radius: 4px;
 }
 
@@ -253,7 +263,7 @@ form textarea {
     margin: 0.5em 0;
     border: none;
     outline: none;
-    font-family: "chairdrobebold";
+    font-family: "bebas_kairegular";
     letter-spacing: 0.06em;
     border-radius: 4px;
 }
@@ -307,12 +317,22 @@ form textarea {
     width: 100%;
 }
 
+footer {
+    border-top: 1px solid #eaeff2;
+}
+
 footer .col-1.d-flex {
     align-items: center;
 }
 
 footer .footerImg {
     margin-left: 1em;
+    width: 120px;
+    height: 120px;
+}
+
+footer .footerImg img {
+    width: 100%;
 }
 
 footer h4 {
@@ -320,6 +340,12 @@ footer h4 {
     color: var(--white);
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .formMain {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -350,17 +376,26 @@ footer h4 {
     .aboutus {
         flex-direction: column;
     }
+    .formMain {
+        width: 70%;
+    }
 }
 
-@media screen and (max-width: 698px) {
+@media screen and (max-width: 767px) {
     .d-flex.hero {
         flex-direction: column;
     }
+}
+
+@media screen and (max-width: 698px) {
     .hr-white {
         height: 3px;
     }
     .footerImg img {
         width: 100px;
+    }
+    .logo a {
+        font-size: 2rem;
     }
 }
 
